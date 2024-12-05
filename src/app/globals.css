@@ -2,14 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Poppins-Bold";
+  src: local("Poppins-Bold"), url(./fonts/Poppins-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins-Medium";
+  src: local("Poppins-Medium"),
+    url(./fonts/Poppins-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins-Light";
+  src: local("Poppins-Light"), url(./fonts/Poppins-Light.ttf) format("truetype");
+}
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
-    --background: #0a0a0a;
+    --background: #000;
     --foreground: #ededed;
   }
 }
@@ -18,4 +38,7 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+::-webkit-scrollbar {
+  width: 0;
 }

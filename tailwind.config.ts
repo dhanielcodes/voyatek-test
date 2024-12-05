@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 
-export default {
+const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,6 +8,13 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'me': "url(/src/images/PORTRAIT.png)",
+      },
+      animation: {
+        'spin-slow': 'spin 5s linear infinite',
+        'spin-slower': 'spin 7s linear infinite',
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -15,4 +22,5 @@ export default {
     },
   },
   plugins: [],
-} satisfies Config;
+};
+export default config;
