@@ -10,15 +10,42 @@ import PlanIcon from "../assets/top-bar-icons/PlanIcon";
 import CommissionIcon from "../assets/top-bar-icons/CommissionIcon";
 import { usePathname, useRouter } from "next/navigation";
 import AppButton from "./bits/AppButton";
+import BellIcon from "../assets/top-bar-icons/BellIcon";
+import CartIcon from "../assets/top-bar-icons/CartIcon";
+import CreateIcon from "../assets/top-bar-icons/CreateIcon";
+import Profile from "@/app/assets/icons/profile.png";
+import Image from "next/image";
+import ArrowDropDown from "../assets/icons/ArrowDropDown";
+
+interface LinkInterface {
+  icon: any;
+  text:
+    | string
+    | number
+    | bigint
+    | boolean
+    | React.ReactElement<any, string | React.JSXElementConstructor<any>>
+    | Iterable<React.ReactNode>
+    | React.ReactPortal
+    | Promise<React.AwaitedReactNode>
+    | null
+    | undefined;
+  link: any;
+}
 
 export default function TopBar() {
   const links = [
     { icon: HomeIcon, text: "Home", link: "/home" },
     { icon: DashboardIcon, text: "Dashboard", link: "/house" },
     { icon: WalletIcon, text: "Wallet", link: "/wallet" },
-    { icon: WalletIcon, text: "Wallet", link: "/yhup" },
     { icon: PlanIcon, text: "Plan a trip", link: "/" },
     { icon: CommissionIcon, text: "Commission for life", link: "/norm" },
+  ];
+
+  const links2 = [
+    { icon: BellIcon, text: "Notification", link: "/home" },
+    { icon: CartIcon, text: "Carts", link: "/house" },
+    { icon: CreateIcon, text: "Create", link: "/wallet" },
   ];
 
   const navigate = useRouter();
@@ -43,43 +70,22 @@ export default function TopBar() {
             )}
           </Formik>
         </div>
-        <div className="flex items-center gap-6">
-          <div className="flex items-center gap-6">
-            {links?.map(
-              (item: {
-                icon: any;
-                text:
-                  | string
-                  | number
-                  | bigint
-                  | boolean
-                  | React.ReactElement<
-                      any,
-                      string | React.JSXElementConstructor<any>
-                    >
-                  | Iterable<React.ReactNode>
-                  | React.ReactPortal
-                  | Promise<React.AwaitedReactNode>
-                  | null
-                  | undefined;
-                link: any;
-              }) => {
-                return (
-                  <div className="text-center grid place-items-center">
-                    <item.icon active={path === item?.link} />
-                    <div
-                      className={`${
-                        path === item?.link
-                          ? "text-[#344054]"
-                          : "text-[#667185]"
-                      }`}
-                    >
-                      {item?.text}
-                    </div>
+        <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4">
+            {links?.map((item: LinkInterface) => {
+              return (
+                <div className="text-center grid place-items-center">
+                  <item.icon active={path === item?.link} />
+                  <div
+                    className={`text-[12px] ${
+                      path === item?.link ? "text-[#344054]" : "text-[#667185]"
+                    }`}
+                  >
+                    {item?.text}
                   </div>
-                );
-              }
-            )}
+                </div>
+              );
+            })}
           </div>
           <svg
             width="2"
@@ -96,11 +102,27 @@ export default function TopBar() {
               stroke="#98A2B3"
             />
           </svg>
-          <AppButton
-            placeholder="Subscribe"
-            background="#0D6EFD"
-            textColor="#FFF"
-          />
+          <AppButton placeholder="Subscribe" />
+          <div className="flex items-center gap-4">
+            {links2?.map((item: LinkInterface) => {
+              return (
+                <div className="text-center grid place-items-center">
+                  <item.icon active={path === item?.link} />
+                  <div
+                    className={`text-[12px] ${
+                      path === item?.link ? "text-[#344054]" : "text-[#667185]"
+                    }`}
+                  >
+                    {item?.text}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+          <div className="flex items-center gap-3">
+            <Image src={Profile} className="w-12 h-12" alt="profile" />
+            <ArrowDropDown />
+          </div>
         </div>
       </div>
     </div>

@@ -19,18 +19,20 @@ const AppButton: React.FC<AppButtonProps> = ({
   placeholder,
   loading,
   disabled,
-  background = "bg-[#FF6500]",
+  background,
+  textColor,
   to,
   width = "100%",
-  textColor = "text-[#000]",
 }) => {
   const navigate = useRouter();
 
   return (
-    <div className={`w-[${width}] [${background}]`}>
+    <div className={`w-[${width}]`}>
       <button
         disabled={disabled}
-        className={`w-full py-3 px-4 text-center text-sm font-semibold flex justify-center items-center gap-2`}
+        className={`w-full aspect-[5/2] rounded-[4px] p-2 px-3 text-center text-sm font-semibold ${
+          background ? background : "bg-[#0D6EFD]"
+        } flex justify-center items-center gap-2`}
         onClick={() => {
           if (to) {
             navigate.push(to);
@@ -40,7 +42,15 @@ const AppButton: React.FC<AppButtonProps> = ({
           }
         }}
       >
-        <div className={`${textColor}`}>{placeholder}</div>
+        <div
+          className={
+            textColor
+              ? textColor
+              : `text-white font-[Poppins-ExtraLight] text-[11px] tracking-[2px]`
+          }
+        >
+          {placeholder}
+        </div>
       </button>
     </div>
   );
