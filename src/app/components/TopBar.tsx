@@ -54,7 +54,7 @@ export default function TopBar() {
 
   return (
     <div className="p-4">
-      <div className="max-w-[1300px] mx-auto flex items-center justify-between">
+      <div className="max-w-[1500px] mx-auto flex items-center justify-between">
         <div className="flex items-center gap-6">
           <Logo />
           <Formik
@@ -70,11 +70,14 @@ export default function TopBar() {
             )}
           </Formik>
         </div>
-        <div className="flex items-center gap-4">
-          <div className="flex items-center gap-4">
-            {links?.map((item: LinkInterface) => {
+        <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3">
+            {links?.map((item: LinkInterface, index: number) => {
               return (
-                <div className="text-center grid place-items-center">
+                <div
+                  key={index}
+                  className="text-center grid place-items-center"
+                >
                   <item.icon active={path === item?.link} />
                   <div
                     className={`text-[12px] ${
@@ -103,10 +106,13 @@ export default function TopBar() {
             />
           </svg>
           <AppButton placeholder="Subscribe" />
-          <div className="flex items-center gap-4">
-            {links2?.map((item: LinkInterface) => {
+          <div className="flex items-center gap-3">
+            {links2?.map((item: LinkInterface, index: number) => {
               return (
-                <div className="text-center grid place-items-center">
+                <div
+                  key={index}
+                  className="text-center grid place-items-center"
+                >
                   <item.icon active={path === item?.link} />
                   <div
                     className={`text-[12px] ${
@@ -120,7 +126,7 @@ export default function TopBar() {
             })}
           </div>
           <div className="flex items-center gap-3">
-            <Image src={Profile} className="w-12 h-12" alt="profile" />
+            <Image src={Profile} className="w-10 h-10" alt="profile" />
             <ArrowDropDown />
           </div>
         </div>

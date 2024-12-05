@@ -11,6 +11,9 @@ type AppButtonProps = {
   radius?: string;
   textColor?: string;
   background?: string;
+  className?: string;
+  textClassName?: string;
+  containerClassName?: string;
   borderWidth?: number;
 };
 
@@ -22,17 +25,19 @@ const AppButton: React.FC<AppButtonProps> = ({
   background,
   textColor,
   to,
-  width = "100%",
+  className,
+  textClassName,
+  containerClassName,
 }) => {
   const navigate = useRouter();
 
   return (
-    <div className={`w-[${width}]`}>
+    <div className={containerClassName}>
       <button
         disabled={disabled}
-        className={`w-full aspect-[5/2] rounded-[4px] p-2 px-3 text-center text-sm font-semibold ${
+        className={`w-full rounded-[4px] p-2 px-3 text-center font-semibold ${
           background ? background : "bg-[#0D6EFD]"
-        } flex justify-center items-center gap-2`}
+        } flex justify-center items-center gap-2 ${className} `}
         onClick={() => {
           if (to) {
             navigate.push(to);
@@ -43,11 +48,9 @@ const AppButton: React.FC<AppButtonProps> = ({
         }}
       >
         <div
-          className={
-            textColor
-              ? textColor
-              : `text-white font-[Poppins-ExtraLight] text-[11px] tracking-[2px]`
-          }
+          className={`font-[Poppins-Light] text-[10px] tracking-[0.5px] ${
+            textColor ? textColor : `text-white `
+          } ${textClassName}`}
         >
           {placeholder}
         </div>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import TopBar from "./components/TopBar";
+import SideBar from "./components/Sidebar";
 
 export const metadata: Metadata = {
   title: "Voya",
@@ -32,9 +33,22 @@ export default function RootLayout({
         <meta property="twitter:title" content="Voya" />
         <meta property="twitter:description" content="Voya tek" />
       </head>
-      <body className={`font-[Poppins-Medium] antialiased`}>
+      <body
+        className={`font-[Poppins-Medium] antialiased h-screen overflow-hidden`}
+      >
         <TopBar />
-        {children}
+        <div className="bg-[#F0F2F5] px-4 py-10">
+          <div className="flex h-screen  w-full gap-6 max-w-[1500px] mx-auto">
+            <div className="w-[300px]">
+              <SideBar />
+            </div>
+            <div
+              className={`w-full overflow-hidden h-[87vh] overflow-y-scroll`}
+            >
+              {children}
+            </div>
+          </div>
+        </div>
       </body>
     </html>
   );
