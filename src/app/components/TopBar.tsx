@@ -70,7 +70,7 @@ export default function TopBar() {
             )}
           </Formik>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-6">
           <div className="flex items-center gap-3">
             {links?.map((item: LinkInterface, index: number) => {
               return (
@@ -92,7 +92,7 @@ export default function TopBar() {
           </div>
           <svg
             width="2"
-            height="48"
+            height="38"
             viewBox="0 0 2 48"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -105,7 +105,7 @@ export default function TopBar() {
               stroke="#98A2B3"
             />
           </svg>
-          <AppButton placeholder="Subscribe" />
+          <AppButton placeholder="Subscribe" className="p-3" />
           <div className="flex items-center gap-3">
             {links2?.map((item: LinkInterface, index: number) => {
               return (
