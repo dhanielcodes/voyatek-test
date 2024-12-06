@@ -30,7 +30,7 @@ export default function FlightCard(props: FlightCardTypeInterface) {
   return (
     <div className={`w-full bg-white mt-4 flex flex-col lg:flex-row`}>
       <div>
-        <div className="grid lg:grid-cols-12 grid-cols-1 grid-rows-3 w-full p-4">
+        <div className="grid lg:grid-cols-12 grid-cols-1 grid-rows-3 lg:grid-rows-1 w-full p-4">
           <div className="flex items-center gap-2 col-span-3 w-full">
             <FlightLogo />
             <div>
