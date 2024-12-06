@@ -1,5 +1,5 @@
 "use client";
-import React, { useContext, useEffect, useState } from "react";
+import React, { ReactNode, useContext, useEffect, useState } from "react";
 import Logo from "@/app/assets/top-bar-icons/Logo";
 import { Form, Formik } from "formik";
 import FormInput from "./bits/FormInput";
@@ -21,17 +21,7 @@ import MainContext from "../context/global.context";
 
 interface LinkInterface {
   icon: any;
-  text:
-    | string
-    | number
-    | bigint
-    | boolean
-    | React.ReactElement<any, string | React.JSXElementConstructor<any>>
-    | Iterable<React.ReactNode>
-    | React.ReactPortal
-    | Promise<React.ReactElement>
-    | null
-    | undefined;
+  text: ReactNode;
   link: any;
 }
 

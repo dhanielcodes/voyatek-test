@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import ActivitiesIcon from "@/app/assets/side-nav-icons/ActivitiesIcon";
 import HotelsIcon from "@/app/assets/side-nav-icons/HotelsIcon";
 import FlightIcon from "@/app/assets/side-nav-icons/FlightIcon";
@@ -10,17 +10,7 @@ import PackageIcon from "@/app/assets/side-nav-icons/PackageIcon";
 import DirectionalIcon from "@/app/assets/icons/DirectionalIcon";
 interface LinkInterface {
   icon: any;
-  text:
-    | string
-    | number
-    | bigint
-    | boolean
-    | React.ReactElement<any, string | React.JSXElementConstructor<any>>
-    | Iterable<React.ReactNode>
-    | React.ReactPortal
-    | Promise<React.ReactElement>
-    | null
-    | undefined;
+  text: ReactNode;
   link: any;
 }
 export default function SideBar() {
