@@ -1,4 +1,4 @@
-import React, { AwaitedReactNode } from "react";
+import React from "react";
 import ActivitiesIcon from "@/app/assets/side-nav-icons/ActivitiesIcon";
 import HotelsIcon from "@/app/assets/side-nav-icons/HotelsIcon";
 import FlightIcon from "@/app/assets/side-nav-icons/FlightIcon";
