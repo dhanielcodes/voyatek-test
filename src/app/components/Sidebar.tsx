@@ -1,4 +1,4 @@
-import React from "react";
+import React, { AwaitedReactNode } from "react";
 import ActivitiesIcon from "@/app/assets/side-nav-icons/ActivitiesIcon";
 import HotelsIcon from "@/app/assets/side-nav-icons/HotelsIcon";
 import FlightIcon from "@/app/assets/side-nav-icons/FlightIcon";
@@ -18,7 +18,7 @@ interface LinkInterface {
     | React.ReactElement<any, string | React.JSXElementConstructor<any>>
     | Iterable<React.ReactNode>
     | React.ReactPortal
-    | Promise<React.AwaitedReactNode>
+    | Promise<AwaitedReactNode>
     | null
     | undefined;
   link: any;

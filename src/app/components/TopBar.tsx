@@ -1,5 +1,10 @@
 "use client";
-import React, { useContext, useEffect, useState } from "react";
+import React, {
+  AwaitedReactNode,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 import Logo from "@/app/assets/top-bar-icons/Logo";
 import { Form, Formik } from "formik";
 import FormInput from "./bits/FormInput";
@@ -29,7 +34,7 @@ interface LinkInterface {
     | React.ReactElement<any, string | React.JSXElementConstructor<any>>
     | Iterable<React.ReactNode>
     | React.ReactPortal
-    | Promise<React.AwaitedReactNode>
+    | Promise<AwaitedReactNode>
     | null
     | undefined;
   link: any;
