@@ -11,6 +11,10 @@ import BoxPersonIcon from "./assets/icons/BoxPersonIcon";
 import FlightSection from "@/app/sections/FlightSection";
 import HotelSection from "./sections/HotelSection";
 import ActivitySection from "./sections/ActivitySection";
+import { Service } from "@/service/services";
+import { useQuery } from "@tanstack/react-query";
+import { useContext, useEffect } from "react";
+import MainContext from "./context/global.context";
 //import useScreenSize from "@/libs/useScreenSize";
 
 export default function Home() {

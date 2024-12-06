@@ -9,7 +9,7 @@ export default function FlightLogo() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_190_10466)">
+      <g clipPath="url(#clip0_190_10466)">
         <path
           d="M12.9688 21.7674C14.3416 23.9994 16.4481 23.9994 17.0398 23.9994H23.9984L15.7854 13.9434C11.9747 14.1114 10.0102 16.5354 10.4362 17.5674L12.9688 21.7674Z"
           fill="url(#paint0_linear_190_10466)"
@@ -36,13 +36,13 @@ export default function FlightLogo() {
           y2="29.1913"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#ED1C24" />
-          <stop offset="0.1263" stop-color="#E81B23" />
-          <stop offset="0.2703" stop-color="#DB1A21" />
-          <stop offset="0.4229" stop-color="#C4171D" />
-          <stop offset="0.5816" stop-color="#A41317" />
-          <stop offset="0.7436" stop-color="#7B0E10" />
-          <stop offset="0.7546" stop-color="#780E0F" />
+          <stop stopColor="#ED1C24" />
+          <stop offset="0.1263" stopColor="#E81B23" />
+          <stop offset="0.2703" stopColor="#DB1A21" />
+          <stop offset="0.4229" stopColor="#C4171D" />
+          <stop offset="0.5816" stopColor="#A41317" />
+          <stop offset="0.7436" stopColor="#7B0E10" />
+          <stop offset="0.7546" stopColor="#780E0F" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_190_10466"
@@ -52,11 +52,11 @@ export default function FlightLogo() {
           y2="14.9258"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#69231D" />
-          <stop offset="0.2647" stop-color="#8D2922" />
-          <stop offset="0.5812" stop-color="#B22F26" />
-          <stop offset="0.8377" stop-color="#C93329" />
-          <stop offset="1" stop-color="#D1342A" />
+          <stop stopColor="#69231D" />
+          <stop offset="0.2647" stopColor="#8D2922" />
+          <stop offset="0.5812" stopColor="#B22F26" />
+          <stop offset="0.8377" stopColor="#C93329" />
+          <stop offset="1" stopColor="#D1342A" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_190_10466"
@@ -66,10 +66,10 @@ export default function FlightLogo() {
           y2="10.4275"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.1" stop-color="#E7EBEE" />
-          <stop offset="0.3511" stop-color="#D5DCE0" />
-          <stop offset="0.8549" stop-color="#A5B4BB" />
-          <stop offset="1" stop-color="#96A7B0" />
+          <stop offset="0.1" stopColor="#E7EBEE" />
+          <stop offset="0.3511" stopColor="#D5DCE0" />
+          <stop offset="0.8549" stopColor="#A5B4BB" />
+          <stop offset="1" stopColor="#96A7B0" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_190_10466"
@@ -79,12 +79,12 @@ export default function FlightLogo() {
           y2="0.145128"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#1C2F72" />
-          <stop offset="0.1275" stop-color="#174687" />
-          <stop offset="0.4038" stop-color="#0D72AF" />
-          <stop offset="0.6512" stop-color="#0692CC" />
-          <stop offset="0.8584" stop-color="#02A6DE" />
-          <stop offset="1" stop-color="#00ADE4" />
+          <stop stopColor="#1C2F72" />
+          <stop offset="0.1275" stopColor="#174687" />
+          <stop offset="0.4038" stopColor="#0D72AF" />
+          <stop offset="0.6512" stopColor="#0692CC" />
+          <stop offset="0.8584" stopColor="#02A6DE" />
+          <stop offset="1" stopColor="#00ADE4" />
         </linearGradient>
         <clipPath id="clip0_190_10466">
           <rect width="24" height="24" fill="white" />

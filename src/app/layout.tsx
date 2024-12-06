@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import TopBar from "./components/TopBar";
 import SideBar from "./components/Sidebar";
+import ReactQueryProvider from "@/libs/ReactQueryProvider";
+import { MainProvider } from "./context/global.context";
 
 export const metadata: Metadata = {
   title: "Voya",
@@ -36,19 +38,23 @@ export default function RootLayout({
       <body
         className={`font-[Poppins-Medium] antialiased h-screen overflow-hidden`}
       >
-        <TopBar />
-        <div className="bg-[#F0F2F5] px-4 py-10">
-          <div className="flex h-screen  w-full gap-6 max-w-[1500px] mx-auto">
-            <div className="w-[300px]">
-              <SideBar />
+        <ReactQueryProvider>
+          <MainProvider>
+            <TopBar />
+            <div className="bg-[#F0F2F5] px-4 py-10">
+              <div className="flex h-screen  w-full gap-6 max-w-[1500px] mx-auto">
+                <div className="w-[300px]">
+                  <SideBar />
+                </div>
+                <div
+                  className={`w-full overflow-hidden h-[87vh] overflow-y-scroll`}
+                >
+                  {children}
+                </div>
+              </div>
             </div>
-            <div
-              className={`w-full overflow-hidden h-[87vh] overflow-y-scroll`}
-            >
-              {children}
-            </div>
-          </div>
-        </div>
+          </MainProvider>
+        </ReactQueryProvider>
       </body>
     </html>
   );

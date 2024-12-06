@@ -10,9 +10,9 @@ import Image from "next/image";
 import ActivityImg from "@/app/assets/images/activity.svg";
 import { MapPinIcon } from "@heroicons/react/24/outline";
 import { CalendarDateRangeIcon } from "@heroicons/react/24/solid";
-import SliderArrowLeft from "../assets/icons/SliderArrowLeft";
-import SliderArrowRight from "../assets/icons/SliderArrowRight";
-import NairaIcon from "../assets/icons/NairaIcon";
+import SliderArrowLeft from "@/app/assets/icons/SliderArrowLeft";
+import SliderArrowRight from "@/app/assets/icons/SliderArrowRight";
+import NairaIcon from "@/app/assets/icons/NairaIcon";
 
 const SlideControls = () => {
   const swiper = useSwiper();

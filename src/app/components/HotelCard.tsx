@@ -10,9 +10,10 @@ import Image from "next/image";
 import HotelImg from "@/app/assets/images/hotel.png";
 import { MapPinIcon } from "@heroicons/react/24/outline";
 import { CalendarDateRangeIcon } from "@heroicons/react/24/solid";
-import SliderArrowLeft from "../assets/icons/SliderArrowLeft";
-import SliderArrowRight from "../assets/icons/SliderArrowRight";
-import NairaIcon from "../assets/icons/NairaIcon";
+import SliderArrowLeft from "@/app/assets/icons/SliderArrowLeft";
+import SliderArrowRight from "@/app/assets/icons/SliderArrowRight";
+import NairaIcon from "@/app/assets/icons/NairaIcon";
+import { FormatCurrency } from "../libs/misc";
 
 const SlideControls = () => {
   const swiper = useSwiper();
@@ -31,7 +32,28 @@ const SlideControls = () => {
   );
 };
 
-export default function HotelCard() {
+interface HotelCardTypeInterface {
+  dest_id: string;
+  search_type: string;
+  city_name: string;
+  label: string;
+  name: string;
+  region: string;
+  hotels: number;
+  nr_hotels: number;
+  roundtrip: string;
+  city_ufi: any;
+  cc1: string;
+  type: string;
+  image_url: string;
+  lc: string;
+  latitude: number;
+  country: string;
+  longitude: number;
+  dest_type: string;
+}
+
+export default function HotelCard(props: HotelCardTypeInterface) {
   return (
     <div className={`w-full bg-white mt-4 flex rounded-[3px]`}>
       <div className="w-full py-4 pl-4">
@@ -46,7 +68,9 @@ export default function HotelCard() {
             >
               <SwiperSlide className="w-full h-full">
                 <Image
-                  src={HotelImg}
+                  src={props.image_url}
+                  width={220}
+                  height={220}
                   className="w-full h-full object-cover rounded-md"
                   alt="hotel img"
                 />
@@ -65,9 +89,7 @@ export default function HotelCard() {
           <div className="w-full">
             <div className="px-4 pb-4 flex justify-between w-full">
               <div>
-                <div className="text-[16px] font-bold">
-                  Riviera Resort, Lekki
-                </div>
+                <div className="text-[16px] font-bold">{props.name}</div>
                 <div className="text-[14px] w-[80%] my-2">
                   18, Kenneth Agbakuru Street, Off Access Bank Admiralty Way,
                   Lekki Phase1
@@ -88,10 +110,10 @@ export default function HotelCard() {
               </div>
               <div>
                 <div className="text-[23px] text-right font-bold flex items-center justify-end">
-                  <NairaIcon /> 123,450.00
+                  <NairaIcon /> {FormatCurrency(123456789)}
                 </div>
                 <div className="text-[12px] text-right text-[#1D2433]">
-                  Total Price: NGN 560,000
+                  Total Price: NGN {FormatCurrency(560000)}
                 </div>
                 <div className="text-[12px] text-right text-[#1D2433]">
                   1 room x 10 nights incl. taxes

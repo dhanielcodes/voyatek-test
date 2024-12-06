@@ -1,21 +1,23 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import Logo from "../assets/top-bar-icons/Logo";
+import React, { useContext, useEffect, useState } from "react";
+import Logo from "@/app/assets/top-bar-icons/Logo";
 import { Form, Formik } from "formik";
 import FormInput from "./bits/FormInput";
-import HomeIcon from "../assets/top-bar-icons/Home";
-import DashboardIcon from "../assets/top-bar-icons/DashboardIcon";
-import WalletIcon from "../assets/top-bar-icons/WalletIcon";
-import PlanIcon from "../assets/top-bar-icons/PlanIcon";
-import CommissionIcon from "../assets/top-bar-icons/CommissionIcon";
+import HomeIcon from "@/app/assets/top-bar-icons/Home";
+import DashboardIcon from "@/app/assets/top-bar-icons/DashboardIcon";
+import WalletIcon from "@/app/assets/top-bar-icons/WalletIcon";
+import PlanIcon from "@/app/assets/top-bar-icons/PlanIcon";
+import CommissionIcon from "@/app/assets/top-bar-icons/CommissionIcon";
 import { usePathname, useRouter } from "next/navigation";
 import AppButton from "./bits/AppButton";
-import BellIcon from "../assets/top-bar-icons/BellIcon";
-import CartIcon from "../assets/top-bar-icons/CartIcon";
-import CreateIcon from "../assets/top-bar-icons/CreateIcon";
+import BellIcon from "@/app/assets/top-bar-icons/BellIcon";
+import CartIcon from "@/app/assets/top-bar-icons/CartIcon";
+import CreateIcon from "@/app/assets/top-bar-icons/CreateIcon";
 import Profile from "@/app/assets/icons/profile.png";
 import Image from "next/image";
-import ArrowDropDown from "../assets/icons/ArrowDropDown";
+import ArrowDropDown from "@/app/assets/icons/ArrowDropDown";
+import SearchIcon from "@/app/assets/icons/Search";
+import MainContext from "../context/global.context";
 
 interface LinkInterface {
   icon: any;
@@ -52,20 +54,29 @@ export default function TopBar() {
 
   const path = usePathname();
 
+  const { setKeyword }: any = useContext(MainContext);
+
   return (
     <div className="p-4">
       <div className="max-w-[1500px] mx-auto flex items-center justify-between">
         <div className="flex items-center gap-6">
           <Logo />
           <Formik
-            initialValues={{ name: "" }}
+            initialValues={{ search: "" }}
             onSubmit={(values) => {
               console.log("Form submitted with values:", values);
+              setKeyword(values.search);
             }}
           >
-            {({ handleSubmit }) => (
+            {({ handleSubmit, handleChange }) => (
               <Form onSubmit={handleSubmit}>
-                <FormInput />
+                <FormInput
+                  onChange={handleChange}
+                  name="search"
+                  placeholder="search"
+                  icon={<SearchIcon />}
+                  containerClassName="w-[310px]"
+                />
               </Form>
             )}
           </Formik>

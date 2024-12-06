@@ -1,13 +1,13 @@
 import React from "react";
-import ActivitiesIcon from "../assets/side-nav-icons/ActivitiesIcon";
-import HotelsIcon from "../assets/side-nav-icons/HotelsIcon";
-import FlightIcon from "../assets/side-nav-icons/FlightIcon";
-import StudyIcon from "../assets/side-nav-icons/StudyIcon";
-import VisaIcon from "../assets/side-nav-icons/VisaIcon";
-import ImmigrationIcon from "../assets/side-nav-icons/ImmigrationIcon";
-import MedicalIcon from "../assets/side-nav-icons/MedicalIcon";
-import PackageIcon from "../assets/side-nav-icons/PackageIcon";
-import DirectionalIcon from "../assets/icons/DirectionalIcon";
+import ActivitiesIcon from "@/app/assets/side-nav-icons/ActivitiesIcon";
+import HotelsIcon from "@/app/assets/side-nav-icons/HotelsIcon";
+import FlightIcon from "@/app/assets/side-nav-icons/FlightIcon";
+import StudyIcon from "@/app/assets/side-nav-icons/StudyIcon";
+import VisaIcon from "@/app/assets/side-nav-icons/VisaIcon";
+import ImmigrationIcon from "@/app/assets/side-nav-icons/ImmigrationIcon";
+import MedicalIcon from "@/app/assets/side-nav-icons/MedicalIcon";
+import PackageIcon from "@/app/assets/side-nav-icons/PackageIcon";
+import DirectionalIcon from "@/app/assets/icons/DirectionalIcon";
 interface LinkInterface {
   icon: any;
   text:

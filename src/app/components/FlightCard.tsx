@@ -1,11 +1,11 @@
 import React, { ReactNode } from "react";
-import FlightLogo from "../assets/icons/FlightLogo";
+import FlightLogo from "@/app/assets/icons/FlightLogo";
 import AppButton from "./bits/AppButton";
-import FlightTakeoffIcon from "../assets/icons/FlightTakeoffIcon";
-import FlightLandingIcon from "../assets/icons/FlightLanding";
-import Line from "../assets/icons/Line";
+import FlightTakeoffIcon from "@/app/assets/icons/FlightTakeoffIcon";
+import FlightLandingIcon from "@/app/assets/icons/FlightLanding";
+import Line from "@/app/assets/icons/Line";
 import { XMarkIcon } from "@heroicons/react/16/solid";
-import NairaIcon from "../assets/icons/NairaIcon";
+import NairaIcon from "@/app/assets/icons/NairaIcon";
 /* interface Card {
 } */
 export default function FlightCard() {

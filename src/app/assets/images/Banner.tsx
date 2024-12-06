@@ -9,7 +9,7 @@ export default function Banner() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_190_10353)">
+      <g clipPath="url(#clip0_190_10353)">
         <rect width="1412" height="200" rx="4" fill="#CFE9FF" />
         <path
           d="M458.889 82.3273H542.307C542.307 82.3273 545.28 82.3273 543.346 79.6664C540.415 75.618 536.271 65.8695 525.555 66.5542C513.296 67.3471 510.677 71.4976 510.677 71.6117C510.677 71.6117 508.809 62.3677 498.376 63.0344C487.942 63.7011 485.594 70.945 485.594 70.945C485.594 70.945 481.311 66.9627 473.947 68.9748C469.851 70.098 465.844 73.774 466.607 77.2398C463.184 76.0084 463.364 75.5459 459.718 76.3628C451.867 78.1167 458.889 82.3273 458.889 82.3273Z"
@@ -34,28 +34,28 @@ export default function Banner() {
         <path
           d="M104.555 78C104.555 78 133.486 84.4754 126.694 122.97"
           stroke="black"
-          stroke-width="0.307957"
+          strokeWidth="0.307957"
           stroke-miterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M131.262 112.583L127.533 116.42L120.941 111.293"
           stroke="black"
-          stroke-width="0.307957"
+          strokeWidth="0.307957"
           stroke-miterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M131.134 100.439L127.281 105.259L116.469 101.455"
           stroke="black"
-          stroke-width="0.307957"
+          strokeWidth="0.307957"
           stroke-miterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M124.224 87.2812L122.742 91.9505L111.023 91.1432"
           stroke="black"
-          stroke-width="0.307957"
+          strokeWidth="0.307957"
           stroke-miterlimit="10"
           stroke-linecap="round"
         />
@@ -66,28 +66,28 @@ export default function Banner() {
         <path
           d="M81.8555 145.334C81.8555 145.334 88.6222 116.469 127.05 123.644"
           stroke="black"
-          stroke-width="0.307957"
+          strokeWidth="0.307957"
           stroke-miterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M116.711 118.967L120.506 122.729L115.312 129.271"
           stroke="black"
-          stroke-width="0.307957"
+          strokeWidth="0.307957"
           stroke-miterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M104.57 118.975L109.348 122.878L105.428 133.648"
           stroke="black"
-          stroke-width="0.307957"
+          strokeWidth="0.307957"
           stroke-miterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M91.3359 125.75L95.9886 127.281L95.073 138.992"
           stroke="black"
-          stroke-width="0.307957"
+          strokeWidth="0.307957"
           stroke-miterlimit="10"
           stroke-linecap="round"
         />
@@ -98,28 +98,28 @@ export default function Banner() {
         <path
           d="M170.433 149.096C170.433 149.096 166.164 119.757 127.27 123.611"
           stroke="black"
-          stroke-width="0.307957"
+          strokeWidth="0.307957"
           stroke-miterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M137.963 119.84L133.859 123.261L138.47 130.227"
           stroke="black"
-          stroke-width="0.307957"
+          strokeWidth="0.307957"
           stroke-miterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M150.066 120.889L144.973 124.368L147.944 135.438"
           stroke="black"
-          stroke-width="0.307957"
+          strokeWidth="0.307957"
           stroke-miterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M162.665 128.771L157.896 129.895L157.805 141.639"
           stroke="black"
-          stroke-width="0.307957"
+          strokeWidth="0.307957"
           stroke-miterlimit="10"
           stroke-linecap="round"
         />
@@ -130,21 +130,21 @@ export default function Banner() {
         <path
           d="M173.882 105.058C173.882 105.058 158.809 98.1332 144.868 105.341C130.926 112.549 130.186 118.017 127.031 123.452"
           stroke="black"
-          stroke-width="0.307957"
+          strokeWidth="0.307957"
           stroke-miterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M139.744 103.609L136.523 110.551L149.915 114.479"
           stroke="black"
-          stroke-width="0.307957"
+          strokeWidth="0.307957"
           stroke-miterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M153.026 98.8574L148.406 103.818L161.54 109.911"
           stroke="black"
-          stroke-width="0.307957"
+          strokeWidth="0.307957"
           stroke-miterlimit="10"
           stroke-linecap="round"
         />
@@ -155,21 +155,21 @@ export default function Banner() {
         <path
           d="M80.0156 105.058C80.0156 105.058 95.0889 98.1332 109.03 105.341C122.971 112.549 123.712 118.017 126.867 123.452"
           stroke="black"
-          stroke-width="0.307957"
+          strokeWidth="0.307957"
           stroke-miterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M114.159 103.609L117.38 110.551L103.988 114.479"
           stroke="black"
-          stroke-width="0.307957"
+          strokeWidth="0.307957"
           stroke-miterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M100.874 98.8574L105.493 103.818L92.3594 109.911"
           stroke="black"
-          stroke-width="0.307957"
+          strokeWidth="0.307957"
           stroke-miterlimit="10"
           stroke-linecap="round"
         />
@@ -180,21 +180,21 @@ export default function Banner() {
         <path
           d="M144.221 170.803C144.221 170.803 151.562 155.93 144.737 141.789C137.912 127.647 132.468 126.757 127.125 123.461"
           stroke="black"
-          stroke-width="0.307957"
+          strokeWidth="0.307957"
           stroke-miterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M146.617 136.72L139.767 133.299L135.473 146.583"
           stroke="black"
-          stroke-width="0.307957"
+          strokeWidth="0.307957"
           stroke-miterlimit="10"
           stroke-linecap="round"
         />
         <path
           d="M150.997 150.129L146.178 145.377L139.719 158.328"
           stroke="black"
-          stroke-width="0.307957"
+          strokeWidth="0.307957"
           stroke-miterlimit="10"
           stroke-linecap="round"
         />
