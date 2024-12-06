@@ -34,7 +34,7 @@ interface LinkInterface {
     | React.ReactElement<any, string | React.JSXElementConstructor<any>>
     | Iterable<React.ReactNode>
     | React.ReactPortal
-    | Promise<AwaitedReactNode>
+    | Promise<React.ReactElement>
     | null
     | undefined;
   link: any;
