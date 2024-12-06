@@ -3,9 +3,9 @@ import ActivityCard from "@/app/components/ActivityCard";
 import AppButton from "@/app/components/bits/AppButton";
 import { useQuery } from "@tanstack/react-query";
 import { useContext, useEffect } from "react";
-import MainContext from "../context/global.context";
+import MainContext from "@/app/context/global.context";
 import { Service } from "@/service/services";
-import Skeleton from "../components/bits/Skeleton";
+import Skeleton from "@/app/components/bits/Skeleton";
 
 export default function ActivitySection() {
   const { keyword }: any = useContext(MainContext);

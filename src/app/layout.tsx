@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import TopBar from "./components/TopBar";
-import SideBar from "./components/Sidebar";
+import TopBar from "@/app/components/TopBar";
+import SideBar from "@/app/components/Sidebar";
 import ReactQueryProvider from "@/libs/ReactQueryProvider";
-import { MainProvider } from "./context/global.context";
+import { MainProvider } from "@/app/context/global.context";
 
 export const metadata: Metadata = {
   title: "Voya",

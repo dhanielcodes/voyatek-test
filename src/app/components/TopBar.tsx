@@ -2,14 +2,14 @@
 import React, { ReactNode, useContext, useEffect, useState } from "react";
 import Logo from "@/app/assets/top-bar-icons/Logo";
 import { Form, Formik } from "formik";
-import FormInput from "./bits/FormInput";
+import FormInput from "@/app/components/bits/FormInput";
 import HomeIcon from "@/app/assets/top-bar-icons/Home";
 import DashboardIcon from "@/app/assets/top-bar-icons/DashboardIcon";
 import WalletIcon from "@/app/assets/top-bar-icons/WalletIcon";
 import PlanIcon from "@/app/assets/top-bar-icons/PlanIcon";
 import CommissionIcon from "@/app/assets/top-bar-icons/CommissionIcon";
 import { usePathname, useRouter } from "next/navigation";
-import AppButton from "./bits/AppButton";
+import AppButton from "@/app/components/bits/AppButton";
 import BellIcon from "@/app/assets/top-bar-icons/BellIcon";
 import CartIcon from "@/app/assets/top-bar-icons/CartIcon";
 import CreateIcon from "@/app/assets/top-bar-icons/CreateIcon";
@@ -17,7 +17,7 @@ import Profile from "@/app/assets/icons/profile.png";
 import Image from "next/image";
 import ArrowDropDown from "@/app/assets/icons/ArrowDropDown";
 import SearchIcon from "@/app/assets/icons/Search";
-import MainContext from "../context/global.context";
+import MainContext from "@/app/context/global.context";
 
 interface LinkInterface {
   icon: any;

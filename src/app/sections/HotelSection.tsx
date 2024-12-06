@@ -5,7 +5,7 @@ import HotelCard from "@/app/components/HotelCard";
 import MainContext from "@/app/context/global.context";
 import { useQuery } from "@tanstack/react-query";
 import { Service } from "@/service/services";
-import Skeleton from "../components/bits/Skeleton";
+import Skeleton from "@/app/components/bits/Skeleton";
 
 export default function HotelSection() {
   const { keyword }: any = useContext(MainContext);

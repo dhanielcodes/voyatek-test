@@ -3,18 +3,17 @@
 import Banner from "@/app/assets/images/banner.png";
 import Person from "@/app/assets/icons/box.png";
 import Image from "next/image";
-import DateTag from "./components/DateTag";
-import Card from "./components/Card";
-import AppButton from "./components/bits/AppButton";
+import DateTag from "@/app/components/DateTag";
+import Card from "@/app/components/Card";
+import AppButton from "@/app/components/bits/AppButton";
 import { EllipsisHorizontalIcon } from "@heroicons/react/16/solid";
-import BoxPersonIcon from "./assets/icons/BoxPersonIcon";
+import BoxPersonIcon from "@/app/assets/icons/BoxPersonIcon";
 import FlightSection from "@/app/sections/FlightSection";
-import HotelSection from "./sections/HotelSection";
-import ActivitySection from "./sections/ActivitySection";
+import HotelSection from "@/app/sections/HotelSection";
+import ActivitySection from "@/app/sections/ActivitySection";
 import { Service } from "@/service/services";
 import { useQuery } from "@tanstack/react-query";
 import { useContext, useEffect } from "react";
-import MainContext from "./context/global.context";
 //import useScreenSize from "@/libs/useScreenSize";
 
 export default function Home() {

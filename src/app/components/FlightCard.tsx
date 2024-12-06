@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import FlightLogo from "@/app/assets/icons/FlightLogo";
-import AppButton from "./bits/AppButton";
+import AppButton from "@/app/components/bits/AppButton";
 import FlightTakeoffIcon from "@/app/assets/icons/FlightTakeoffIcon";
 import FlightLandingIcon from "@/app/assets/icons/FlightLanding";
 import Line from "@/app/assets/icons/Line";

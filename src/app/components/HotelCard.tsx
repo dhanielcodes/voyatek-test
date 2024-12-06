@@ -13,7 +13,7 @@ import { CalendarDateRangeIcon } from "@heroicons/react/24/solid";
 import SliderArrowLeft from "@/app/assets/icons/SliderArrowLeft";
 import SliderArrowRight from "@/app/assets/icons/SliderArrowRight";
 import NairaIcon from "@/app/assets/icons/NairaIcon";
-import { FormatCurrency } from "../libs/misc";
+import { FormatCurrency } from "@/app/libs/misc";
 
 const SlideControls = () => {
   const swiper = useSwiper();

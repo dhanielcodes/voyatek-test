@@ -1,11 +1,11 @@
 import FlightIcon from "@/app/assets/icons/FlightIcon";
 import AppButton from "@/app/components/bits/AppButton";
 import FlightCard from "@/app/components/FlightCard";
-import MainContext from "../context/global.context";
+import MainContext from "@/app/context/global.context";
 import { useContext, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Service } from "@/service/services";
-import Skeleton from "../components/bits/Skeleton";
+import Skeleton from "@/app/components/bits/Skeleton";
 
 export default function FlightSection() {
   const { keyword }: any = useContext(MainContext);
