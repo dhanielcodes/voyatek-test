@@ -42,7 +42,7 @@ export default function RootLayout({
           <MainProvider>
             <TopBar />
             <div className="bg-[#F0F2F5] px-4 py-10">
-              <div className="flex h-screen  w-full gap-6 max-w-[1500px] mx-auto">
+              <div className="lg:flex h-screen w-full gap-6 max-w-[1500px] mx-auto">
                 <div className="w-[300px]">
                   <SideBar />
                 </div>

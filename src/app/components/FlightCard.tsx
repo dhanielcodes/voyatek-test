@@ -8,17 +8,35 @@ import { XMarkIcon } from "@heroicons/react/16/solid";
 import NairaIcon from "@/app/assets/icons/NairaIcon";
 /* interface Card {
 } */
-export default function FlightCard() {
+interface FlightCardTypeInterface {
+  id: string;
+  type: string;
+  name: string;
+  code: string;
+  city: string;
+  cityName: string;
+  regionName: string;
+  country: string;
+  countryName: string;
+  countryNameShort: string;
+  photoUri: string;
+  distanceToCity: {
+    value: number;
+    unit: string;
+  };
+  parent: string;
+}
+export default function FlightCard(props: FlightCardTypeInterface) {
   return (
-    <div className={`w-full bg-white mt-4 flex`}>
+    <div className={`w-full bg-white mt-4 flex flex-col lg:flex-row`}>
       <div>
-        <div className="grid grid-cols-12 w-full p-4">
+        <div className="grid lg:grid-cols-12 grid-cols-1 grid-rows-3 w-full p-4">
           <div className="flex items-center gap-2 col-span-3 w-full">
             <FlightLogo />
             <div>
-              <div className="text-[16px]">American Airlines</div>
+              <div className="text-[16px]">{props.name}</div>
               <div className="flex items-center gap-2">
-                <div className="text-[#676E7E] text-[12px]"> AA-829</div>
+                <div className="text-[#676E7E] text-[12px]"> {props.id}</div>
                 <AppButton
                   placeholder="First Class"
                   className="p-1 w-[80] bg-[#0A369D]"
@@ -37,7 +55,8 @@ export default function FlightCard() {
               <div className="flex w-[85%] mx-auto justify-between">
                 <FlightTakeoffIcon />
                 <div className="text-[12px] text-[#676E7E]">
-                  Duration: 1h 45m
+                  Distance: {Math.round(props.distanceToCity?.value)}{" "}
+                  {props.distanceToCity?.unit}
                 </div>
                 <FlightLandingIcon />
               </div>
@@ -53,7 +72,7 @@ export default function FlightCard() {
               <div className="text-[#676E7E] text-[12px]">Sun, 20 Aug</div>
             </div>
           </div>
-          <div className="col-span-3 self-center">
+          <div className="lg:col-span-3 self-center">
             <div className="text-[23px] text-right font-bold flex items-center justify-end">
               {" "}
               <NairaIcon /> 123,450.00

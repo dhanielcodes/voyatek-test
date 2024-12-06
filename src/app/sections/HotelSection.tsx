@@ -5,13 +5,14 @@ import HotelCard from "@/app/components/HotelCard";
 import MainContext from "@/app/context/global.context";
 import { useQuery } from "@tanstack/react-query";
 import { Service } from "@/service/services";
+import Skeleton from "../components/bits/Skeleton";
 
 export default function HotelSection() {
   const { keyword }: any = useContext(MainContext);
 
   const { data, isLoading, refetch, isFetching } = useQuery({
-    queryKey: ["GetRefundsQuery"],
-    queryFn: () => Service.GetHotelQuery(`?query=${keyword || "nigeria"}`),
+    queryKey: ["GetHotelQuery"],
+    queryFn: () => Service.GetHotelQuery(`?query=${keyword || "usa"}`),
   });
 
   useEffect(() => {
@@ -33,34 +34,55 @@ export default function HotelSection() {
           textClassName="text-[12px]"
         />
       </div>
+      {isLoading || isFetching ? <Skeleton /> : ""}
+      {data?.data?.length === 0 ? <div>No Data</div> : ""}
+      {!isLoading || !isFetching
+        ? data?.data?.map(
+            (
+              item: {
+                dest_id: string;
+                search_type: string;
+                city_name: string;
+                label: string;
+                name: string;
+                region: string;
+                hotels: number;
+                nr_hotels: number;
+                roundtrip: string;
+                city_ufi: any;
+                cc1: string;
+                type: string;
+                image_url: string;
+                lc: string;
+                latitude: number;
+                country: string;
+                longitude: number;
+                dest_type: string;
 
-      {data?.data?.map(
-        (
-          item: {
-            dest_id: string;
-            search_type: string;
+                /*  dest_type: string;
+            cc1: string;
             city_name: string;
             label: string;
-            name: string;
-            region: string;
-            hotels: number;
-            nr_hotels: number;
-            roundtrip: string;
-            city_ufi: any;
-            cc1: string;
-            type: string;
-            image_url: string;
-            lc: string;
-            latitude: number;
-            country: string;
             longitude: number;
-            dest_type: string;
-          },
-          index: number
-        ) => {
-          return <HotelCard key={index} {...item} />;
-        }
-      )}
+            latitude: number;
+            type: string;
+            region: string;
+            city_ufi: number;
+            name: string;
+            roundtrip: string;
+            country: string;
+            image_url: string;
+            dest_id: string;
+            nr_hotels: number;
+            lc: string;
+            hotels: number; */
+              },
+              index: number
+            ) => {
+              return <HotelCard key={index} {...item} />;
+            }
+          )
+        : ""}
     </div>
   );
 }

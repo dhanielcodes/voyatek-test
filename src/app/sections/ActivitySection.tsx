@@ -5,13 +5,14 @@ import { useQuery } from "@tanstack/react-query";
 import { useContext, useEffect } from "react";
 import MainContext from "../context/global.context";
 import { Service } from "@/service/services";
+import Skeleton from "../components/bits/Skeleton";
 
 export default function ActivitySection() {
   const { keyword }: any = useContext(MainContext);
 
   const { data, isLoading, refetch, isFetching } = useQuery({
-    queryKey: ["GetRefundsQuery"],
-    queryFn: () => Service.GetFlightQuery(`?query=${keyword || "nigeria"}`),
+    queryKey: ["GetActivitiesQuery"],
+    queryFn: () => Service.GetActivitiesQuery(`?query=${keyword || "usa"}`),
   });
 
   useEffect(() => {
@@ -34,33 +35,28 @@ export default function ActivitySection() {
         />
       </div>
 
-      {data?.data?.map(
-        (
-          item: {
-            dest_id: string;
-            search_type: string;
-            city_name: string;
-            label: string;
-            name: string;
-            region: string;
-            hotels: number;
-            nr_hotels: number;
-            roundtrip: string;
-            city_ufi: any;
-            cc1: string;
-            type: string;
-            image_url: string;
-            lc: string;
-            latitude: number;
-            country: string;
-            longitude: number;
-            dest_type: string;
-          },
-          index: number
-        ) => {
-          return <ActivityCard key={index} {...item} />;
-        }
-      )}
+      {isLoading || isFetching ? <Skeleton /> : ""}
+      {data?.data?.products?.length === 0 ? <div>No Data</div> : ""}
+      {!isLoading || !isFetching
+        ? data?.data?.products?.map(
+            (
+              item: {
+                id: string;
+                __typename: string;
+                title: string;
+                productId: string;
+                productSlug: string;
+                taxonomySlug: string;
+                cityUfi: number;
+                cityName: string;
+                countryCode: string;
+              },
+              index: number
+            ) => {
+              return <ActivityCard key={index} {...item} />;
+            }
+          )
+        : ""}
     </div>
   );
 }

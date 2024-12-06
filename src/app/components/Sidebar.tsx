@@ -35,7 +35,7 @@ export default function SideBar() {
     { icon: PackageIcon, text: "Vacation Packages", link: "/home" },
   ];
   return (
-    <div className="p-6 bg-white">
+    <div className="lg:block hidden p-6 bg-white">
       <div className="">
         {links?.map((item: LinkInterface, index: number) => {
           return (

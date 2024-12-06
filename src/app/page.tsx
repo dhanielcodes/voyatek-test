@@ -57,8 +57,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex my-4 justify-between items-start">
-        <div className="flex gap-1">
+      <div className="flex flex-col lg:flex-rowmy-4 gap-4 justify-between items-start">
+        <div className="flex flex-col lg:flex-row lg:gap-1 gap-4">
           <Card
             title="Activities"
             description="Build, personalize, and optimize your itineraries with our trip planner."

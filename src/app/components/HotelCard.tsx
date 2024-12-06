@@ -57,7 +57,7 @@ export default function HotelCard(props: HotelCardTypeInterface) {
   return (
     <div className={`w-full bg-white mt-4 flex rounded-[3px]`}>
       <div className="w-full py-4 pl-4">
-        <div className="flex">
+        <div className="flex flex-col lg:flex-row">
           <div className="w-[220px] h-[220px] relative">
             <Swiper
               spaceBetween={10}
@@ -77,7 +77,9 @@ export default function HotelCard(props: HotelCardTypeInterface) {
               </SwiperSlide>
               <SwiperSlide className="w-full h-full">
                 <Image
-                  src={HotelImg}
+                  src={props.image_url}
+                  width={220}
+                  height={220}
                   className="w-full h-full object-cover rounded-md"
                   alt="hotel img"
                 />
@@ -87,12 +89,11 @@ export default function HotelCard(props: HotelCardTypeInterface) {
           </div>
 
           <div className="w-full">
-            <div className="px-4 pb-4 flex justify-between w-full">
+            <div className="px-4 pb-4 flex flex-col lg:flex-row justify-between w-full">
               <div>
                 <div className="text-[16px] font-bold">{props.name}</div>
                 <div className="text-[14px] w-[80%] my-2">
-                  18, Kenneth Agbakuru Street, Off Access Bank Admiralty Way,
-                  Lekki Phase1
+                  {props.city_name}, {props.country}
                 </div>
                 <div className="flex gap-2">
                   <div className="text-[14px] text-[#0D6EFD] flex items-center gap-1">
@@ -109,18 +110,18 @@ export default function HotelCard(props: HotelCardTypeInterface) {
                 </div>
               </div>
               <div>
-                <div className="text-[23px] text-right font-bold flex items-center justify-end">
+                <div className="text-[23px] lg:text-right font-bold flex items-center lg:justify-end">
                   <NairaIcon /> {FormatCurrency(123456789)}
                 </div>
-                <div className="text-[12px] text-right text-[#1D2433]">
+                <div className="text-[12px] lg:text-right text-[#1D2433]">
                   Total Price: NGN {FormatCurrency(560000)}
                 </div>
-                <div className="text-[12px] text-right text-[#1D2433]">
+                <div className="text-[12px] lg:text-right text-[#1D2433]">
                   1 room x 10 nights incl. taxes
                 </div>
               </div>
             </div>
-            <div className="p-4 w-full border-y border-[#E4E7EC] flex justify-between">
+            <div className="p-4 w-full border-y border-[#E4E7EC] flex flex-col lg:flex-row justify-between">
               <div className="text-[15px] text-[#676E7E]">
                 Facilites: Pool Bar
               </div>
