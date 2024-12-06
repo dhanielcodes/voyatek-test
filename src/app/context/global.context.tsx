@@ -1,13 +1,16 @@
 "use client";
-import { createContext, useState } from "react";
-
-const MainContext = createContext(null);
+import { createContext, Dispatch, SetStateAction, useState } from "react";
+type ContextType = {
+  keyword: string | undefined;
+  setKeyword: Dispatch<SetStateAction<string | undefined>>;
+};
+const MainContext = createContext<ContextType | null>(null);
 interface ContextTypeInterface {
   children: React.ReactNode;
 }
 
 export const MainProvider = ({ children }: ContextTypeInterface) => {
-  const [keyword, setKeyword] = useState<string | undefined>(undefined);
+  const [keyword, setKeyword] = useState<any>(null);
 
   return (
     <MainContext.Provider
