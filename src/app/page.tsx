@@ -56,7 +56,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-rowmy-4 gap-4 justify-between items-start">
+      <div className="flex flex-col lg:flex-row my-4 gap-4 justify-between items-start">
         <div className="flex flex-col lg:flex-row lg:gap-1 gap-4">
           <Card
             title="Activities"
